@@ -1,4 +1,4 @@
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 function SingIn() {

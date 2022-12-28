@@ -1,6 +1,5 @@
 function Message({ message }) {
   const { text, photoURL } = message;
-  console.log(photoURL);
 
   // const messageClass = uid === "user" ? "sent" : "received";
 

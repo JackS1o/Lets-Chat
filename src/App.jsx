@@ -1,9 +1,9 @@
 import { getAuth } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Chat from "./Chat";
+import Chat from "./components/Chat";
 import { app } from "./firebase";
-import SignIn from "./SignIn";
-import SignOut from "./SignOut";
+import SignIn from "./components/SignIn";
+import SignOut from "./components/SignOut";
 
 const auth = getAuth(app);
 

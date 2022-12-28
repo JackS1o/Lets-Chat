@@ -7,7 +7,7 @@ import {
   serverTimestamp,
 } from "firebase/firestore";
 import { useState } from "react";
-import { auth, db } from "./firebase";
+import { auth, db } from "../firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import Message from "./Message";
 
@@ -32,7 +32,7 @@ function Chat() {
     <>
       <main>
         {messages &&
-          messages.map((msg) => <Message key={msg.id} message={msg} />)}
+          messages.map((msg, index) => <Message key={index} message={msg} />)}
       </main>
       <form>
         <input
