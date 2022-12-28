@@ -1,9 +1,13 @@
-function SignOut () {
+import { auth } from "./firebase";
+
+function SignOut() {
   return (
     <div>
-      <h1>Sign Out</h1>
+      {auth.currentUser && (
+        <button onClick={() => auth.signOut()}>Sign Out</button>
+      )}
     </div>
-  )
+  );
 }
 
-export default SignOut
+export default SignOut;
