@@ -7,10 +7,15 @@
 .chat {
   height: 25rem;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .messages-list {
+  display: flex;
+  flex-wrap: wrap;
   height: 22rem;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
