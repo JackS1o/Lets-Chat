@@ -4,6 +4,7 @@ import Chat from "./components/Chat";
 import { app } from "./firebase";
 import SignIn from "./components/SignIn";
 import SignOut from "./components/SignOut";
+import Header from "./components/Header";
 
 const auth = getAuth(app);
 
@@ -11,7 +12,8 @@ function App() {
   const [user] = useAuthState(auth);
   return (
     <>
-    {user ? (<Chat />) : (<SignIn />)}
+      <Header />
+      {user ? <Chat /> : <SignIn />}
       <SignOut />
     </>
   );
