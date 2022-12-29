@@ -70,10 +70,10 @@ function Chat() {
                   display: "flex",
                   justifyContent: "space-evenly",
                   alignItems: "center",
-                  width: "95%",
+                  width: "100%",
                 }}
               >
-                <Grid item xs={10} mr={2}>
+                <Grid item xs={10} mr={2} ml={2}>
                   <FormControl fullWidth>
                     <TextField
                       variant="outlined"
