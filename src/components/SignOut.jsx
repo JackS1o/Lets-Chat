@@ -1,7 +1,6 @@
 import { auth } from "../firebase";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { IconButton, Typography } from "@mui/material";
-import { Box } from "@mui/system";
 
 function SignOut() {
   return (

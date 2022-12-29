@@ -1,4 +1,4 @@
-import { ListItemText, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { Fragment } from "react";
 import "../style/messages.css";
@@ -11,22 +11,21 @@ function Message({ message }) {
   return (
     <Fragment>
       <img className="user-image" src={photoURL} alt="foto de perfil" />
-      <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-        <Typography
-          variant="p"
-          sx={{
-            display: "flex",
-            height: "auto",
-            width: "auto",
-            backgroundColor: "rgb(0, 162, 255)",
-            color: "black",
-            padding: "5px",
-            borderRadius: "10px",
-          }}
-        >
-          {text}
-        </Typography>
-      </Box>
+      <Typography
+        variant="p"
+        sx={{
+          display: "flex",
+          height: "auto",
+          width: "auto",
+          backgroundColor: "rgb(0, 162, 255)",
+          color: "white",
+          padding: "5px",
+          borderRadius: "10px",
+          fontSize: "18px",
+        }}
+      >
+        {text}
+      </Typography>
     </Fragment>
   );
 }
