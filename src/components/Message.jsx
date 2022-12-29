@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { Fragment } from "react";
 import { auth } from "../firebase";
 import "../style/messages.css";

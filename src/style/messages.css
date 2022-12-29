@@ -19,6 +19,7 @@
 
 .sent {
   flex-direction: row-reverse;
+  margin-left: auto;
 }
 
 .sent p {
@@ -30,7 +31,6 @@
   padding: 5px;
   border-radius: 10px;
   font-size: 18px;
-  margin-left: 100%;
 }
 
 .received p {
