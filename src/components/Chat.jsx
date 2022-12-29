@@ -65,26 +65,35 @@ function Chat() {
                     ))}
                 </List>
               </Grid>
-              <Grid item xs={10} mr={2}>
-                <FormControl fullWidth>
-                  <TextField
-                    variant="outlined"
-                    label="Digite sua mensagem"
-                    type="text"
-                    value={formValue}
-                    onChange={(e) => setFormValue(e.target.value)}
-                  />
-                </FormControl>
-              </Grid>
-              <Grid item xs={1}>
-                <IconButton
-                  aria-label="send"
-                  onClick={sendMessage}
-                  color="primary"
-                >
-                  <SendIcon />
-                </IconButton>
-              </Grid>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  width: "100%",
+                }}
+              >
+                <Grid item xs={10} mr={2}>
+                  <FormControl fullWidth>
+                    <TextField
+                      variant="outlined"
+                      label="Digite sua mensagem"
+                      type="text"
+                      value={formValue}
+                      onChange={(e) => setFormValue(e.target.value)}
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item xs={1}>
+                  <IconButton
+                    aria-label="send"
+                    onClick={sendMessage}
+                    color="primary"
+                  >
+                    <SendIcon />
+                  </IconButton>
+                </Grid>
+              </Box>
               <Grid item></Grid>
             </Grid>
           </Box>
