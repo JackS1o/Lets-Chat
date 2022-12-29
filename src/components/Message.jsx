@@ -1,30 +1,22 @@
 import { Typography } from "@mui/material";
 import { Fragment } from "react";
+import { auth } from "../firebase";
 import "../style/messages.css";
 
 function Message({ message }) {
-  const { text, photoURL } = message;
+  const { text, photoURL, uid } = message;
 
-  // const messageClass = uid === "user" ? "sent" : "received";
+  const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
   return (
     <Fragment>
-      <img className="user-image" src={photoURL} alt="foto de perfil" />
-      <Typography
-        variant="p"
-        sx={{
-          display: "flex",
-          height: "auto",
-          width: "auto",
-          backgroundColor: "rgb(0, 162, 255)",
-          color: "white",
-          padding: "5px",
-          borderRadius: "10px",
-          fontSize: "18px",
-        }}
-      >
-        {text}
-      </Typography>
+      <div className={`message ${messageClass}`}>
+        <img className="user-image" src={photoURL} alt="foto de perfil" />
+        <p
+        >
+          {text}
+        </p>
+      </div>
     </Fragment>
   );
 }
