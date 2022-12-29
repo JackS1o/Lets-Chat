@@ -11,11 +11,12 @@ function SingIn() {
       sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}
     >
       <Button
+        variant="contained"
         color="inherit"
         onClick={() => signInWithGoogle()}>
         <img
           className="user-image"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoa_4-bNUjFin3_Nx8nBGn8kXrc1UEFBs-Z85XlEeeu6zPLcQ&s"
+          src="https://imagepng.org/wp-content/uploads/2019/08/google-icon-2.png"
           alt="logo do google"
         />
         Sing In with Google

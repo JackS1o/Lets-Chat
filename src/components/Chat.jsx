@@ -50,9 +50,6 @@ function Chat() {
       <Container sx={{ marginTop: 12 }}>
         <Paper elevation={5}>
           <Box p={3}>
-            <Typography variant="h4" gutterBottom>
-              oi
-            </Typography>
             <Divider />
             <Grid container spacing={4} alignItems="center">
               <Grid className="chat" item fullWidth>
@@ -80,6 +77,7 @@ function Chat() {
                       label="Digite sua mensagem"
                       type="text"
                       value={formValue}
+                      autoComplete="off"
                       onChange={(e) => setFormValue(e.target.value)}
                     />
                   </FormControl>
@@ -94,9 +92,6 @@ function Chat() {
                   </IconButton>
                 </Grid>
               </Box>
-              <Grid item>
-                <SignOut />
-              </Grid>
             </Grid>
           </Box>
         </Paper>
