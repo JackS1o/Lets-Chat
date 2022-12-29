@@ -19,3 +19,15 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+ul::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #49b8b3;
+}

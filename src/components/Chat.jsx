@@ -6,7 +6,7 @@ import {
   query,
   serverTimestamp,
 } from "firebase/firestore";
-import { Fragment, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import { auth, db } from "../firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import Message from "./Message";
@@ -29,6 +29,7 @@ function Chat() {
   const messagesRef = collection(db, "messages");
   const queryMessage = query(messagesRef, orderBy("createdAt"), limit(1000));
   const [messages] = useCollectionData(queryMessage, { idField: "id" });
+  const scrollMessage = useRef();
 
   const [formValue, setFormValue] = useState("");
 
@@ -41,6 +42,7 @@ function Chat() {
       photoURL,
     });
     setFormValue("");
+    scrollMessage.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -58,6 +60,7 @@ function Chat() {
                         <Message message={msg} />
                       </ListItem>
                     ))}
+                  <div ref={scrollMessage}></div>
                 </List>
               </Grid>
               <Box
