@@ -65,7 +65,7 @@ function Chat() {
                     ))}
                 </List>
               </Grid>
-              <Grid item xs={11}>
+              <Grid item xs={10} mr={2}>
                 <FormControl fullWidth>
                   <TextField
                     variant="outlined"
