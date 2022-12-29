@@ -1,26 +1,24 @@
 import { auth } from "../firebase";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 function SignOut() {
   return (
-    <Box
-      sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-    >
-      <Box sx={{ display: "flex" }}>
-        {auth.currentUser && (
-          <IconButton
-            aria-label="logout"
-            color="inherit"
-            onClick={() => auth.signOut()}
-          >
-            <LogoutIcon />
+    <>
+      {auth.currentUser && (
+        <IconButton
+          aria-label="logout"
+          color="inherit"
+          onClick={() => auth.signOut()}
+        >
+          <LogoutIcon fontSize="large" />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             LogOut
-          </IconButton>
-        )}
-      </Box>
-    </Box>
+          </Typography>
+        </IconButton>
+      )}
+    </>
   );
 }
 
