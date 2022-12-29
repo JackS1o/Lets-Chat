@@ -11,10 +11,7 @@ function Message({ message }) {
     <Fragment>
       <div className={`message ${messageClass}`}>
         <img className="user-image" src={photoURL} alt="foto de perfil" />
-        <p
-        >
-          {text}
-        </p>
+        <p>{text}</p>
       </div>
     </Fragment>
   );

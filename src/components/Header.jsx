@@ -14,7 +14,7 @@ function Header() {
   return (
     <Fragment>
       <Box>
-        <AppBar>
+        <AppBar sx={{ backgroundColor:"#1e1e24"}}>
           <Toolbar>
             <Box mr={2}>
               <ChatIcon fontSize="large" />

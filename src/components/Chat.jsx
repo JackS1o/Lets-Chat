@@ -23,6 +23,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import SendIcon from "@mui/icons-material/Send";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "../style/chat.css";
 
 function Chat() {
@@ -44,6 +45,14 @@ function Chat() {
     setFormValue("");
     scrollMessage.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#1e1e24",
+      },
+    },
+  });
 
   return (
     <Fragment>
@@ -73,14 +82,18 @@ function Chat() {
               >
                 <Grid item xs={10} mr={2} ml={2}>
                   <FormControl fullWidth>
-                    <TextField
-                      variant="outlined"
-                      label="Digite sua mensagem"
-                      type="text"
-                      value={formValue}
-                      autoComplete="off"
-                      onChange={(e) => setFormValue(e.target.value)}
-                    />
+                    <ThemeProvider theme={theme}>
+                      <TextField
+                        variant="outlined"
+                        color="primary"
+                        label="Digite sua mensagem"
+                        type="text"
+                        value={formValue}
+                        autoComplete="off"
+                        onChange={(e) => setFormValue(e.target.value)}
+                        inputProps={{ style: { border: "red" } }}
+                      />
+                    </ThemeProvider>
                   </FormControl>
                 </Grid>
                 <Grid item xs={1}>
@@ -89,7 +102,7 @@ function Chat() {
                     onClick={sendMessage}
                     color="primary"
                   >
-                    <SendIcon />
+                    <SendIcon sx={{ color: "#1e1e24" }} />
                   </IconButton>
                 </Grid>
               </Box>
