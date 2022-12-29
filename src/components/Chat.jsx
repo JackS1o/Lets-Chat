@@ -11,7 +11,6 @@ import { auth, db } from "../firebase";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import Message from "./Message";
 import {
-  Button,
   Container,
   Divider,
   FormControl,
@@ -25,6 +24,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import SendIcon from "@mui/icons-material/Send";
+import SignOut from "./SignOut";
 import "../style/chat.css";
 
 function Chat() {
@@ -70,7 +70,7 @@ function Chat() {
                   display: "flex",
                   justifyContent: "space-evenly",
                   alignItems: "center",
-                  width: "100%",
+                  width: "95%",
                 }}
               >
                 <Grid item xs={10} mr={2}>
@@ -94,7 +94,9 @@ function Chat() {
                   </IconButton>
                 </Grid>
               </Box>
-              <Grid item></Grid>
+              <Grid item>
+                <SignOut />
+              </Grid>
             </Grid>
           </Box>
         </Paper>
