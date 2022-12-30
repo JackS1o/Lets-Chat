@@ -19,7 +19,7 @@ function SingIn() {
           src="https://imagepng.org/wp-content/uploads/2019/08/google-icon-2.png"
           alt="logo do google"
         />
-        Sing In with Google
+        Sign In with Google
       </Button>
     </Box>
   );
